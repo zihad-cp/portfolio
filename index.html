@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zihad — CSE @ HSTU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <div class="nav-logo">zihad-cp</div>
+  <ul class="nav-links">
+    <li><a href="javascript:void(0)" onclick="goTo('about')">about</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('projects')">projects</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('resources')">resources</a></li>
+    <li><a href="javascript:void(0)" onclick="goTo('contact')">contact</a></li>
+  </ul>
+  <button class="menu-btn" onclick="openDrawer()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <span class="drawer-logo">zihad-cp</span>
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="javascript:void(0)" onclick="closeDrawer(); goTo('about')">About</a>
+    <a href="javascript:void(0)" onclick="closeDrawer(); goTo('skills')">Skills</a>
+    <a href="javascript:void(0)" onclick="closeDrawer(); goTo('projects')">Projects</a>
+    <a href="javascript:void(0)" onclick="closeDrawer(); goTo('resources')">Resources</a>
+    <a href="javascript:void(0)" onclick="closeDrawer(); goTo('contact')">Contact</a>
+  </nav>
+  <div class="drawer-footer">
+    <p>CSE Student<br>HSTU · Dinajpur, Bangladesh</p>
+    <br>
+    <a href="https://github.com/zihad-cp" target="_blank">github.com/zihad-cp →</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-tag">CSE Student · HSTU · Bangladesh</p>
+  <h1 class="hero-name">Hello,<br>I'm <span>Zihad.</span></h1>
+  <p class="hero-desc">
+    Building things on the web.<br>
+    Currently working on First Infinity —<br>
+    a social media PWA.
+  </p>
+  <div class="hero-cta">
+    <a href="javascript:void(0)" onclick="goTo('projects')" class="btn-primary">View Projects</a>
+    <a href="javascript:void(0)" onclick="goTo('contact')" class="btn-ghost">Get in touch</a>
+  </div>
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label reveal">01 — about</p>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <h2>Building ideas<br>into reality.</h2>
+      <p>I'm a Computer Science student at <strong>Hajee Mohammad Danesh Science and Technology University</strong> in Dinajpur, Bangladesh.</p>
+      <p>I build full-stack web apps using <strong>HTML, CSS, JavaScript</strong> and <strong>Firebase</strong>. My current project is <strong>First Infinity</strong>, a TikTok/Instagram-inspired Progressive Web App.</p>
+      <p>I'm also working toward <strong>competitive programming</strong> and preparing for <strong>graduate school abroad</strong>.</p>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <div class="stat-num">1+</div>
+        <div class="stat-label">live projects</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">curiosity</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">BD</div>
+        <div class="stat-label">based in</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">→</div>
+        <div class="stat-label">always building</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <p class="section-label reveal">02 — stack</p>
+  <div class="skills-list reveal">
+    <span class="skill-tag">HTML</span>
+    <span class="skill-tag">CSS</span>
+    <span class="skill-tag">JavaScript</span>
+    <span class="skill-tag">Firebase</span>
+    <span class="skill-tag">PWA</span>
+    <span class="skill-tag">Git</span>
+    <span class="skill-tag">GitHub Pages</span>
+    <span class="skill-tag">C++</span>
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">REST APIs</span>
+    <span class="skill-tag">Competitive Programming</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label reveal">03 — projects</p>
+  <div class="projects-grid reveal">
+    <div class="project-card">
+      <div class="project-num">001</div>
+      <div class="project-name">First Infinity</div>
+      <div class="project-desc">A social media PWA inspired by TikTok and Instagram. Features Reels, Stories, a Feed, real-time Firebase backend, and ImgBB image hosting. Deployed on GitHub Pages.</div>
+      <div class="project-tags">
+        <span class="project-tag">PWA</span>
+        <span class="project-tag">Firebase</span>
+        <span class="project-tag">JavaScript</span>
+      </div>
+      <a href="https://zihad-cp.github.io/first-infinity/" target="_blank" class="project-link">View live</a>
+    </div>
+    <div class="project-card">
+      <div class="project-num">002</div>
+      <div class="project-name">More Coming Soon</div>
+      <div class="project-desc">Currently focused on competitive programming and building more projects. Check back later or reach out to see what I'm working on right now.</div>
+      <div class="project-tags">
+        <span class="project-tag">In progress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources" class="resources-section">
+  <p class="section-label reveal">05 — resources</p>
+
+  <div class="resources-tabs reveal">
+    <button class="res-tab active" onclick="switchTab(this,'courses')">CSE Courses</button>
+    <button class="res-tab" onclick="switchTab(this,'web3')">Web3</button>
+    <button class="res-tab" onclick="switchTab(this,'problems')">Problems</button>
+    <button class="res-tab" onclick="switchTab(this,'tools')">Build</button>
+    <button class="res-tab" onclick="switchTab(this,'languages')">HTML / CSS / Java</button>
+  </div>
+
+  <!-- CSE COURSES -->
+  <div class="res-panel active" id="tab-courses">
+    <a href="https://www.youtube.com/@MissingSemester" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🎓</span><span class="res-badge">MIT</span></div>
+      <div class="res-name">Missing Semester</div>
+      <div class="res-desc">Shell, Git, debugging, editors — the practical CS skills no class teaches.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📐</span><span class="res-badge">MIT OCW</span></div>
+      <div class="res-name">Mathematics for CS</div>
+      <div class="res-desc">Proofs, graph theory, probability. Essential foundation for algorithms.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLBF3763AF2E1C572F" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">⚙️</span><span class="res-badge">Stanford</span></div>
+      <div class="res-name">Algorithms (Tim Roughgarden)</div>
+      <div class="res-desc">Divide & conquer, sorting, graphs, shortest paths, NP-completeness.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://cs50.harvard.edu/x/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🖥️</span><span class="res-badge">Harvard</span></div>
+      <div class="res-name">CS50x</div>
+      <div class="res-desc">Best intro to CS. Covers C, Python, SQL, JavaScript and web dev.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/@Abdul_Bari" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📊</span><span class="res-badge">YouTube</span></div>
+      <div class="res-name">Abdul Bari — Algorithms</div>
+      <div class="res-desc">Clear visual explanations of DSA concepts. Great for HSTU exams.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🔗</span><span class="res-badge">YouTube</span></div>
+      <div class="res-name">Operating Systems (Kunal Kushwaha)</div>
+      <div class="res-desc">OS concepts explained simply — processes, threads, memory, scheduling.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+  </div>
+
+  <!-- WEB3 -->
+  <div class="res-panel" id="tab-web3">
+    <a href="https://www.youtube.com/playlist?list=PLWUCKsxdKl0oksKOA2oHFuyUPTk4giYeW" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">⛓️</span><span class="res-badge">Free</span></div>
+      <div class="res-name">Blockchain Basics (Whiteboard Crypto)</div>
+      <div class="res-desc">Visual, beginner-friendly explanations of blockchain, wallets, and consensus.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/@PatrickCollins" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📜</span><span class="res-badge">Solidity</span></div>
+      <div class="res-name">Patrick Collins — Solidity</div>
+      <div class="res-desc">Best free course for smart contract dev. Foundry, Hardhat, full Web3 stack.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLbbtODcOYIoE0D6fschNU4rqtGFRpk3ea" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🦊</span><span class="res-badge">Ethereum</span></div>
+      <div class="res-name">ETH.Build</div>
+      <div class="res-desc">Austin Griffith's hands-on Ethereum playground series. Learn by building.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/@DappUniversity" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🏗️</span><span class="res-badge">DApp</span></div>
+      <div class="res-name">Dapp University</div>
+      <div class="res-desc">Build real decentralized apps — DEXes, NFT marketplaces, token contracts.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://docs.soliditylang.org/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📖</span><span class="res-badge">Docs</span></div>
+      <div class="res-name">Solidity Docs</div>
+      <div class="res-desc">Official language reference. Read this alongside any tutorial series.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://cryptozombies.io/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🧟</span><span class="res-badge">Interactive</span></div>
+      <div class="res-name">CryptoZombies</div>
+      <div class="res-desc">Learn Solidity by coding a zombie game. Best interactive intro to smart contracts.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+  </div>
+
+  <!-- PROBLEMS -->
+  <div class="res-panel" id="tab-problems">
+    <a href="https://codeforces.com/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">⚔️</span><span class="res-badge">Competitive</span></div>
+      <div class="res-name">Codeforces</div>
+      <div class="res-desc">Start with Div 3 problems rated 800–1200. Best platform for rating-based progress.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://leetcode.com/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">💼</span><span class="res-badge">Interview</span></div>
+      <div class="res-name">LeetCode</div>
+      <div class="res-desc">Industry standard for software job interviews. Focus on Easy/Medium first.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://atcoder.jp/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🇯🇵</span><span class="res-badge">Competitive</span></div>
+      <div class="res-name">AtCoder</div>
+      <div class="res-desc">Clean problem sets, great for beginners. ABC contests are very beginner-friendly.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.hackerrank.com/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🟢</span><span class="res-badge">Practice</span></div>
+      <div class="res-name">HackerRank</div>
+      <div class="res-desc">Good for structured practice by topic — strings, arrays, trees, SQL, and more.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://cp-algorithms.com/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📚</span><span class="res-badge">Reference</span></div>
+      <div class="res-name">CP Algorithms</div>
+      <div class="res-desc">The best reference for competitive programming algorithms. Bookmark this.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://cses.fi/problemset/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🏋️</span><span class="res-badge">Problem Set</span></div>
+      <div class="res-name">CSES Problem Set</div>
+      <div class="res-desc">300 hand-picked problems covering every major CP topic. A full curriculum in one set.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+  </div>
+
+  <!-- HTML / CSS / JAVA -->
+  <div class="res-panel" id="tab-languages">
+    <a href="https://www.youtube.com/playlist?list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🌐</span><span class="res-badge">HTML</span></div>
+      <div class="res-name">HTML Full Course (Dave Gray)</div>
+      <div class="res-desc">Complete HTML from scratch. Semantic tags, forms, tables, accessibility.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📖</span><span class="res-badge">HTML</span></div>
+      <div class="res-name">MDN — Learn HTML</div>
+      <div class="res-desc">The best written reference for HTML. Every element and attribute explained.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLZlA0Gpn_vH9xx-RRVNG187ETT2ekWFsq" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🎨</span><span class="res-badge">CSS</span></div>
+      <div class="res-name">CSS Full Course (Dave Gray)</div>
+      <div class="res-desc">Selectors, flexbox, grid, animations, responsive design — all from scratch.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📐</span><span class="res-badge">CSS</span></div>
+      <div class="res-name">CSS Flexbox Guide</div>
+      <div class="res-desc">The definitive visual guide to Flexbox. Bookmark this — you will use it every day.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🔲</span><span class="res-badge">CSS</span></div>
+      <div class="res-name">CSS Grid Guide</div>
+      <div class="res-desc">Complete visual reference for CSS Grid Layout. Rows, columns, areas, and gaps.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://flukeout.github.io/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🍽️</span><span class="res-badge">CSS</span></div>
+      <div class="res-name">CSS Diner</div>
+      <div class="res-desc">Learn CSS selectors by picking food off plates. 32 fun interactive levels.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">☕</span><span class="res-badge">Java</span></div>
+      <div class="res-name">Java Full Course (Neso Academy)</div>
+      <div class="res-desc">OOP, arrays, strings, inheritance, interfaces — full university-level Java course.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/@CodingWithJohn" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🧩</span><span class="res-badge">Java</span></div>
+      <div class="res-name">Coding with John</div>
+      <div class="res-desc">Short focused Java videos. Great for understanding OOP concepts quickly.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.w3schools.com/java/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📗</span><span class="res-badge">Java</span></div>
+      <div class="res-name">W3Schools — Java</div>
+      <div class="res-desc">Quick reference with runnable examples for every Java concept. Good for revision.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+  </div>
+
+  <!-- BUILD / TOOLS -->
+  <div class="res-panel" id="tab-tools">
+    <a href="https://developer.mozilla.org/en-US/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🌐</span><span class="res-badge">Reference</span></div>
+      <div class="res-name">MDN Web Docs</div>
+      <div class="res-desc">The definitive reference for HTML, CSS, and JavaScript. Use this daily.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://firebase.google.com/docs" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🔥</span><span class="res-badge">Backend</span></div>
+      <div class="res-name">Firebase Docs</div>
+      <div class="res-desc">Auth, Firestore, Storage, Hosting. Everything powering First Infinity.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.youtube.com/@Fireship" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🚀</span><span class="res-badge">YouTube</span></div>
+      <div class="res-name">Fireship</div>
+      <div class="res-desc">100-second explainers on every modern web tech. Fast, dense, always useful.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://roadmap.sh/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🗺️</span><span class="res-badge">Guide</span></div>
+      <div class="res-name">Roadmap.sh</div>
+      <div class="res-desc">Visual learning paths for frontend, backend, DevOps, and more. Great for planning.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://pages.github.com/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">📦</span><span class="res-badge">Deploy</span></div>
+      <div class="res-name">GitHub Pages</div>
+      <div class="res-desc">Free static site hosting. Push code, get a live URL. No server needed.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+    <a href="https://www.figma.com/" target="_blank" class="res-card">
+      <div class="res-card-top"><span class="res-icon">🎨</span><span class="res-badge">Design</span></div>
+      <div class="res-name">Figma</div>
+      <div class="res-desc">Design UIs before building them. Free tier is enough for most projects.</div>
+      <div class="res-arrow">open →</div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <p class="section-label reveal" style="justify-content: center;">04 — contact</p>
+  <h2 class="reveal">Let's<br><span>connect.</span></h2>
+  <p class="reveal">I'm open to collaborations, questions, and new opportunities.</p>
+  <a href="mailto:your@email.com" class="btn-primary reveal">Send a message</a>
+  <div class="social-links reveal">
+    <a href="https://github.com/zihad-cp" target="_blank" class="social-link">GitHub</a>
+    <a href="#" class="social-link">LinkedIn</a>
+    <a href="#" class="social-link">Twitter</a>
+  </div>
+</section>
+
+<footer>
+  <span><span class="status-dot"></span>Available for projects</span>
+  <span>© 2026 Zihad</span>
+  <span>HSTU · Dinajpur, BD</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
